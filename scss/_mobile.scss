@@ -1,0 +1,161 @@
+// Xl - Wide Screens
+// width has to be 1171px or wider to show up
+// because a min-width has been set to 1171px in config scss file
+@include mediaXl {
+  main#work {
+    .projects-info,
+    .projects-design,
+    .projects-design-for-work {
+      // .projects-youtube
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
+// Lg - Desktops & Laptops
+// width has to between 769px - 1170px to show up
+// because a min and max width range is set in config scss file
+@include mediaLg {
+  main#work {
+    .projects-info,
+    .projects-design,
+    .projects-design-for-work {
+      // .projects-youtube
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+// Md - Tablets & Small Laptops
+// width has to be between 501px - 768px to show up
+// because a min and max width range is set in config scss file
+@include mediaMd {
+  main {
+    align-items: center;
+    text-align: center;
+
+    .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+  }
+
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0;
+
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px;
+  }
+
+  .menu-branding {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0);
+
+    // Small Portrait 150x150
+    .portrait {
+      background: url("../img/portrait_small.jpg");
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+  main#about {
+    .about-info {
+      grid-template-areas:
+        "bioimage"
+        "bio"
+        "job1"
+        "job2"
+        "job3";
+      grid-template-columns: 1fr;
+    }
+  }
+
+  main#work {
+    .projects-info,
+    .projects-design,
+    .projects-design-for-work {
+      // .projects-youtube
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+// Sm - Mobile Phones
+// width has to be between 301px - 500px to show up
+// because a min and max width range is set in config scss file
+@include mediaSm {
+  main {
+    align-items: center;
+    text-align: center;
+
+    .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+  }
+
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0;
+
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px;
+  }
+
+  .menu-branding {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0);
+
+    // Small Portrait 150x150
+    .portrait {
+      background: url("../img/portrait_small.jpg");
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+  main#home h1 {
+    margin-top: 10vh;
+  }
+
+  main#about {
+    .about-info {
+      grid-template-areas:
+        "bioimage"
+        "bio"
+        "job1"
+        "job2"
+        "job3";
+      grid-template-columns: 1fr;
+    }
+  }
+
+  main#work {
+    .projects-info,
+    .projects-design,
+    .projects-design-for-work {
+      // .projects-youtube
+      grid-template-columns: 1fr;
+    }
+  }
+}
